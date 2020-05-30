@@ -15,8 +15,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
   if message.content.startwith("!help"):
-      await client.send_message(message.channel, "Command Help")
-      await client.send_message(message.channel, "```!help - Show Punch Bot's Commands\n!download - Sends you the latest version of Punch")
+    if message.channel.is_private and message.author.id != "716206205856382996":
+      await client.send_message(message.author.id, "Commands:")
+      await client.send_message(message.author.id, "```!help - Punch Bot에 대한 명령어들을 확인합니다.")
  
 
 acces_token = os.environ["BOT_TOKEN"]
