@@ -16,7 +16,7 @@ async def on_ready():
 async def on_message(message):
   if message.content.startswith("!help"):
     if message.channel.is_private and message.author.id == "716206205856382996":
-      await client.send_message(message.author.id, "성공")
+      await message.channel.send("성공")
  
 
 acces_token = os.environ["BOT_TOKEN"]
