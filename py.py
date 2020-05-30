@@ -8,8 +8,6 @@ client = discord.Client()
 async def on_ready():
   print(client.user.id)
   print("ready")
-  game = discord.Game("Commands: !help")
-  await client.change.presence(status=discord.Status.online, activity=game)
   
 @client.event
 async def on_message(message):
