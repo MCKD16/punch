@@ -22,6 +22,17 @@ async def on_message(message):
     else:
       if message.content[1:5] == "help":
         await client.send_message(message.channel, "Command Help:\n```!help - Punch Bot의 명령어들을 확인합니다.```")
+      if message.content[1:9] == "download":
+        await client.send_message(message.channel, "다운로드 링크: None")
+      if message.content[1:7] == "notice":
+        if message.author.id == "623502843558756394":
+          if message.content[8:]:
+            await client.send_message("713704015384543262", "```" + message.content[8:] + "```")
+          else:
+            await client.send_message(message.channel, "```공지사항으로 등록할 메세지를 적어주세요.```")
+        else:
+          await client.send_message(message.channel, "```당신은 이 명령어를 사용할 권한이 없습니다.```")
+          
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
