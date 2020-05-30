@@ -32,6 +32,14 @@ async def on_message(message):
             await client.send_message(message.channel, "```공지사항으로 등록할 메세지를 적어주세요.```")
         else:
           await client.send_message(message.channel, "```당신은 이 명령어를 사용할 권한이 없습니다.```")
+      if message.content[1:7] == "update":
+        if message.author.id == "623502843558756394":
+          if message.content[8:]:
+            await client.send_message(discord.utils.get(client.get_all_channels(), id="713705245280305173"), "@everyone\n```" + message.content[8:] + "```")
+          else:
+            await client.send_message(message.channel, "```업데이트으로 등록할 메세지를 적어주세요.```")
+        else:
+          await client.send_message(message.channel, "```당신은 이 명령어를 사용할 권한이 없습니다.```")
           
 
 access_token = os.environ["BOT_TOKEN"]
