@@ -23,7 +23,7 @@ async def on_message(message):
       if message.content[1:5] == "help":
         await client.send_message(message.channel, "Command Help:\n```!help - Punch Bot의 명령어들을 확인합니다.```")
       if message.content[1:9] == "download":
-        await client.send_message(message.channel, "다운로드 링크: None")
+        await client.send_message(message.channel, "```다운로드 링크: http://www.mediafire.com/file/kohhcknu7ch4xwf/Punch.zip/file```")
       if message.content[1:7] == "notice":
         if message.author.id == "623502843558756394":
           if message.content[8:]:
