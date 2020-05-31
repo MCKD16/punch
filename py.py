@@ -40,8 +40,7 @@ async def on_message(message):
             await client.send_message(message.channel, "```업데이트으로 등록할 메세지를 적어주세요.```")
         else:
           await client.send_message(message.channel, "```당신은 이 명령어를 사용할 권한이 없습니다.```")
-  else:
-    await client.send_message(message.channel, "```봇과 1대1 디스코드 채팅에서 사용하실 수 있습니다.```")
+
           
 
 access_token = os.environ["BOT_TOKEN"]
