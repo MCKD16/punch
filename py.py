@@ -17,7 +17,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
   if message.channel.is_private and message.author.id != "716206205856382996":
-    if message.content[1:] == "!":
+    if message.content == "!":
         await client.send_message(message.channel, "```정확하지 않은 명령어입니다.")
     else:
       if message.content[:5] == "help":
