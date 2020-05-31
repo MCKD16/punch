@@ -48,6 +48,13 @@ async def on_message(message):
             await client.send_message(message.channel, "```공지사항으로 등록할 메세지를 적어주세요.```")
         else:
           await client.send_message(message.channel, "```당신은 이 명령어를 사용할 권한이 없습니다.```")
+  if message.channel.id == "716569826918924288":
+    if message.content[1:3] == "인증":
+      author = message.author.id
+      role = discord.utils.get(message.guild.roles, name="인증됨")
+      await author.add_roles(role)
+      await client.send_message(message.channel, "```" + message.author + "이(가) 성공적으로 인증하셨습니다.```")
+    
 
           
 
