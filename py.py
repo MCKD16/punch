@@ -53,7 +53,7 @@ async def on_message(message):
       author = message.author.id
       role = discord.utils.get(message.guild.roles, name="인증됨")
       await author.add_roles(role)
-      await client.send_message(message.channel, "```" + message.author + "이(가) 성공적으로 인증하셨습니다.```")
+      await client.send_message(discord.utils.get(client.get_all_channels(), id="716574502540017685"), "```" + message.author + "이(가) 성공적으로 인증하셨습니다.```")
     
 
           
