@@ -20,7 +20,7 @@ async def on_message(message):
     if message.content[1:] == "!":
         await client.send_message(message.channel, "```정확하지 않은 명령어입니다.")
     else:
-      if message.content[1:5] == "help":
+      if message.content[:5] == "help":
         await client.send_message(message.channel, "Command Help:\n```!help - Punch Bot의 명령어들을 확인합니다.\n!download - Punch PVP Client를 다운로드 할 수 있는 링크를 지급 받습니다.```")
       if message.content[1:9] == "download":
         await client.send_message(message.channel, "다운로드 링크: http://www.mediafire.com/file/bxrwd2y870369ql/Punch.zip/file")
