@@ -43,7 +43,7 @@ async def on_message(message):
       if message.content[1:4] == "say":
         if message.author.id == "623502843558756394":
           if message.content[8:]:
-            await client.send_message(discord.utils.get(client.get_all_channels(), id=message.content[5:23]), "@everyone\n" + message.content[8:] + "")
+            await client.send_message(discord.utils.get(client.get_all_channels(), id=message.content[5:23]), "@everyone\n" + message.content[24:] + "")
           else:
             await client.send_message(message.channel, "```공지사항으로 등록할 메세지를 적어주세요.```")
         else:
