@@ -15,7 +15,7 @@ async def on_ready():
   await client.change_presence(game=discord.Game(name='Commands: !help', type=1))
 
 @client.event
-async def on_message(message, member: discord.Member):
+async def on_message(message):
   if message.channel.is_private and message.author.id != "716206205856382996":
     if message.content == "!":
       await client.send_message(message.channel, "```정확하지 않은 명령어입니다.```")
